@@ -29,15 +29,25 @@ if (isset($_GET['feed_url'])) {
 <head>
   <title>Podcast Player</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="styles.css?v=78">
+  <link rel="stylesheet" type="text/css" href="styles.css?v=1791">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-  <nav>
-    <div class="container">
-      <a href="index.php" class="logo">Podcast Player</a>
+<nav>
+  <div class="container">
+  <a href="index.php" class="logo">Podcast Player</a>
+    <ul class="nav-items">
+      <li><a href="index.php">Home</a></li>
+      <li><a href="https://pocketbarista.uk/pod/index.php?search_term=politics">Politics</a></li>
+      <li><a href="https://pocketbarista.uk/pod/index.php?search_term=music">Music</a></li>
+      <li><a href="https://pocketbarista.uk/pod/index.php?search_term=comedy">Comedy</a></li>
+      <li><a href="https://pocketbarista.uk/pod/index.php?search_term=BBC">BBC</a></li>
+    </ul>
+    <div class="nav-toggle">
+      <i class="fas fa-bars"></i>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <div id="podcast-player">
     <div class="container">

@@ -1,4 +1,5 @@
-body {
+
+  body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -24,6 +25,197 @@ body {
     text-decoration: none;
     margin-left: 20px;
   }
+  
+  #feed-input {
+    background-color: #fff;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  input[type="text"] {
+    width: 400px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #podcast-player {
+    padding: 50px 0;
+  }
+  
+  .player-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  #podcast-artwork {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .podcast-details {
+    flex: 1;
+  }
+  
+  #podcast-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #podcast-description {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  #player-container {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  audio {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  #player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #player-controls button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #player-controls button:hover {
+    background-color: #0056b3;
+  }
+  
+  .episode {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .episode:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .episode.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .episode h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .episode p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 28px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  
+    input[type="text"] {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+  
+    button {
+      border-radius: 4px;
+    }
+  
+    .player-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #podcast-artwork {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    #podcast-title {
+      font-size: 20px;
+    }
+  
+    #podcast-description {
+      font-size: 14px;
+    }
+  
+    #player-controls button {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      margin: 0 5px;
+    }
+  }
+
+
+
+
   
   #search-container {
     background-color: #fff;
@@ -68,7 +260,7 @@ body {
     padding: 50px 0;
   }
   
-  .podcast-item {
+  .podcast-item-home {
     display: flex;
     align-items: flex-start;
     margin-bottom: 30px;
@@ -78,7 +270,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .podcast-item img {
+  .podcast-item-home img {
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -86,22 +278,74 @@ body {
     margin-right: 20px;
   }
   
-  .podcast-info h2 {
+  .podcast-info-home h2 {
     font-size: 20px;
     margin-bottom: 10px;
   }
   
-  .podcast-info h2 a {
+  .podcast-info-home h2 a {
     color: #007bff;
     text-decoration: none;
   }
   
-  .podcast-info h2 a:hover {
+  .podcast-info-home h2 a:hover {
     text-decoration: underline;
   }
   
-  .podcast-info p {
+  .podcast-info-home p {
     font-size: 14px;
     color: #666;
     line-height: 1.5;
+  }
+
+  nav {
+    background: linear-gradient(to right, #007bff, #00a4e4);
+    padding: 15px 0;
+  }
+  
+  .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-items {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .nav-items li {
+    margin-left: 30px;
+  }
+  
+  .nav-items li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-items li a:hover {
+    color: #f0f0f0;
+  }
+  
+  .nav-items li a i {
+    margin-right: 5px;
+  }
+  
+  .nav-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-items {
+      display: none;
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
   }
